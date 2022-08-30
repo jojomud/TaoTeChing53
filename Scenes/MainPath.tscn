@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Models/rock1.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/rock/rocktexture.png" type="Texture" id=2]
+[ext_resource path="res://Models/rock/rock1.obj" type="ArrayMesh" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 2 )
 
 [node name="MainPath" type="Spatial"]
 
@@ -22,14 +29,28 @@ skeleton = NodePath("../..")
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07742, 0 )
 
-[node name="rock1" type="MeshInstance" parent="."]
-transform = Transform( -0.487692, 0, 0.873016, 0, 1, 0, -0.873016, 0, -0.487692, 1.1439, 0.100019, -0.499 )
-mesh = ExtResource( 2 )
-
-[node name="rock1" type="MeshInstance" parent="rock1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00693, -0.069923, -3.38723 )
-mesh = ExtResource( 2 )
-
 [node name="rock2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.250554, 0.232197, 4.25709 )
-mesh = ExtResource( 2 )
+transform = Transform( 0.623757, 0.230075, 0.746989, -0.781618, 0.183607, 0.596122, 0, -0.955695, 0.294357, -0.365035, 0.10001, 1.06316 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../rock1")
+material/0 = SubResource( 3 )
+
+[node name="rock1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.870579, 0.492029, 0, -0.492029, 0.870579, 0.0337262, 0.100015, -3.44998 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="rock3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.559, 0.100015, 2.93755 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="rock4" type="MeshInstance" parent="."]
+transform = Transform( 0.907132, -0.304521, -0.290479, 0.420846, 0.656395, 0.626126, 0, -0.690226, 0.723594, 4.80755, 1.42706, -6.96666 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="rock5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.18596, 0.100015, 4.0439 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 4 )
