@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Models/rock/rock1.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/rock/rocktexture.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( 0.600144, 0.300068, -2.32458e-06, 0.452859, -0.279974, 0.328948, 0.452613, -0.279882, -0.328953, 0.19005, 0.307706, -0.585296, -3.49283e-05, 0.470041, -2.32458e-06, 0.230397, 0.372861, 0.709218, -0.184479, -0.298472, 0.567551, -3.49283e-05, -0.470009, -2.32458e-06, -0.167801, -0.271508, -0.51649, -0.448514, 0.277062, -0.325912, -0.465069, 0.287369, 0.337818, -0.652702, -0.326356, -2.32458e-06 )
+
+[node name="ROCK" type="StaticBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
