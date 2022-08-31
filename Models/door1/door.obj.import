@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/door.obj-15487ef73be90b2291b7293d8f091a8c.mesh"
+
+[deps]
+
+files=[ "res://.import/door.obj-15487ef73be90b2291b7293d8f091a8c.mesh" ]
+
+source_file="res://Models/door1/door.obj"
+dest_files=[ "res://.import/door.obj-15487ef73be90b2291b7293d8f091a8c.mesh", "res://.import/door.obj-15487ef73be90b2291b7293d8f091a8c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

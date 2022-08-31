@@ -1,4 +1,4 @@
-extends Node
+extends KinematicBody
 
 
 # Declare member variables here. Examples:
@@ -14,3 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area_body_entered(body):
+	$AnimationPlayer.play("Door close")
