@@ -12,11 +12,11 @@
 [ext_resource path="res://Models/plant/plant.png" type="Texture" id=10]
 [ext_resource path="res://Models/plant/plant.obj" type="ArrayMesh" id=11]
 [ext_resource path="res://Models/mansion/mansion2.obj" type="ArrayMesh" id=12]
-[ext_resource path="res://Models/People/Untitled.002.png" type="Texture" id=13]
+[ext_resource path="res://Models/People/Untitled.003.png" type="Texture" id=13]
 [ext_resource path="res://Models/People/Poor person.obj" type="ArrayMesh" id=14]
 [ext_resource path="res://Models/undulatingGround.obj" type="ArrayMesh" id=15]
 [ext_resource path="res://Scenes/Area.gd" type="Script" id=16]
-[ext_resource path="res://Scenes/MainPath.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/MainPathfrom mansion.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpatialMaterial" id=23]
 albedo_texture = ExtResource( 3 )
@@ -53,7 +53,7 @@ points = PoolVector3Array( 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1,
 [sub_resource type="ConvexPolygonShape" id=14]
 points = PoolVector3Array( 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1 )
 
-[sub_resource type="SpatialMaterial" id=24]
+[sub_resource type="SpatialMaterial" id=28]
 albedo_texture = ExtResource( 13 )
 
 [sub_resource type="Environment" id=15]
@@ -215,64 +215,65 @@ shape = SubResource( 14 )
 transform = Transform( 0.0849759, 0, 0.235115, 0, 0.25, 0, -0.235115, 0, 0.0849759, -7.94218, -1.95503, 5.94548 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person2" type="MeshInstance" parent="."]
 transform = Transform( 0.214912, 0, -0.127722, 0, 0.25, 0, 0.127722, 0, 0.214912, -5.4706, -1.39743, 5.94548 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person3" type="MeshInstance" parent="."]
 transform = Transform( 0.0339592, 0, -0.247683, 0, 0.25, 0, 0.247683, 0, 0.0339592, -4.11967, -1.23921, 7.50574 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person4" type="MeshInstance" parent="."]
 transform = Transform( -0.108065, 0, 0.225437, 0, 0.25, 0, -0.225437, 0, -0.108065, -17.1203, -2.12303, 7.54142 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person5" type="MeshInstance" parent="."]
 transform = Transform( 0.237039, 0, -0.0794503, 0, 0.25, 0, 0.0794503, 0, 0.237039, -15.3874, -2.12932, 5.7791 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person6" type="MeshInstance" parent="."]
 transform = Transform( 0.200415, 0, -0.149445, 0, 0.25, 0, 0.149445, 0, 0.200415, -13.3277, -2.26784, 5.9098 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person7" type="MeshInstance" parent="."]
 transform = Transform( -0.108065, 0, 0.225437, 0, 0.25, 0, -0.225437, 0, -0.108065, 5.32628, -1.23921, 7.54142 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person10" type="MeshInstance" parent="."]
 transform = Transform( 0.0359163, 0, -0.247407, 0, 0.25, 0, 0.247407, 0, 0.0359163, 10.1691, -1.03685, 7.54142 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person8" type="MeshInstance" parent="."]
 transform = Transform( 0.237039, 0, -0.0794503, 0, 0.25, 0, 0.0794503, 0, 0.237039, 6.93769, -1.07419, 5.7791 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="Poor person9" type="MeshInstance" parent="."]
 transform = Transform( 0.200415, 0, -0.149445, 0, 0.25, 0, 0.149445, 0, 0.200415, 8.99739, -1.11965, 5.9098 )
 mesh = ExtResource( 14 )
 skeleton = NodePath("../player")
-material/0 = SubResource( 24 )
+material/0 = SubResource( 28 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 transform = Transform( -0.995109, 0, -0.0987813, 0, 1, 0, 0.0987813, 0, -0.995109, 0.357317, -1.11569, -10.9673 )
+MAX_SPEED = 10
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 15 )
@@ -532,8 +533,10 @@ transform = Transform( 0.613898, 0, -0.789383, 0, 0.999998, 0, 0.789383, 0, 0.61
 shape = SubResource( 17 )
 
 [node name="Area" type="Area" parent="."]
+collision_mask = 2
 script = ExtResource( 16 )
 target_scene = ExtResource( 17 )
+quit = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.479843, -15.5399 )

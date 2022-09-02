@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Tao Te Ching 53"
+run/main_scene="res://Scenes/MainPath.tscn"
 config/icon="res://icon.png"
 
 [gui]

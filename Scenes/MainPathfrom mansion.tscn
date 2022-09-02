@@ -1,19 +1,15 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Models/path/path.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Models/plant/plant.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://Scenes/Mansion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/table/table.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://Models/PinkTRee/PinkTree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Scenelaod.gd" type="Script" id=6]
 [ext_resource path="res://Models/plant/plant.png" type="Texture" id=7]
 [ext_resource path="res://Models/rock/rocktexture.png" type="Texture" id=8]
 [ext_resource path="res://Models/rock/rock1.obj" type="ArrayMesh" id=9]
 [ext_resource path="res://Models/path/god auful texture.png" type="Texture" id=10]
-[ext_resource path="res://Models/table/woodtexture.png" type="Texture" id=11]
-[ext_resource path="res://Models/People/Untitled.002.png" type="Texture" id=12]
-[ext_resource path="res://Models/People/weathy.obj" type="ArrayMesh" id=13]
-[ext_resource path="res://Models/table/table.obj" type="ArrayMesh" id=14]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 10 )
@@ -37,12 +33,6 @@ albedo_texture = ExtResource( 8 )
 [sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 7 )
 
-[sub_resource type="SpatialMaterial" id=8]
-albedo_texture = ExtResource( 11 )
-
-[sub_resource type="SpatialMaterial" id=9]
-albedo_texture = ExtResource( 12 )
-
 [node name="MainPath" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
@@ -56,14 +46,13 @@ material/0 = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.17284, 0, -0.98495, 0, 1, 0, 0.98495, 0, 0.17284, -36.2395, 2.45328, -0.388565 )
+transform = Transform( 0.962701, 0, -0.270567, 0, 1, 0, 0.270567, 0, 0.962701, 19.2704, 0.884036, 59.521 )
 MAX_SPEED = 10
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0838, 1.72939, 59.2976 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6778, 1.72939, 62.7998 )
 collision_mask = 2
 script = ExtResource( 6 )
-target_scene = ExtResource( 4 )
 quit = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
@@ -589,38 +578,7 @@ mesh = ExtResource( 3 )
 material/0 = SubResource( 7 )
 
 [node name="table" type="MeshInstance" parent="."]
-transform = Transform( -0.119244, 0, -2.99763, 0, 3, 0, 2.99763, 0, -0.119244, -87.56, -1.27935, 32.5872 )
-mesh = ExtResource( 14 )
-material/0 = SubResource( 8 )
-
-[node name="weathy" type="MeshInstance" parent="table"]
-transform = Transform( 0.0443656, 0, 0.492064, 0, 0.25, 0, -0.246032, 0, 0.0887313, -1.34534, 0.412084, -1.42068 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
-
-[node name="weathy2" type="MeshInstance" parent="table"]
-transform = Transform( 0.0925502, 0, -0.464476, 0, 0.25, 0, 0.232238, 0, 0.1851, 1.24505, 0.412084, -1.52372 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
-
-[node name="weathy3" type="MeshInstance" parent="table"]
-transform = Transform( 0.0417309, 0, -0.492985, 0, 0.25, 0, 0.246492, 0, 0.0834618, 1.3368, 0.412084, 0.782866 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
-
-[node name="weathy4" type="MeshInstance" parent="table"]
-transform = Transform( -0.0142777, 0, 0.499184, 0, 0.25, 0, -0.249592, 0, -0.0285555, -1.37844, 0.412084, 0.890867 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
-
-[node name="weathy5" type="MeshInstance" parent="table"]
-transform = Transform( -0.0862713, 0, 0.469286, 0, 0.25, 0, -0.234643, 0, -0.172543, -1.32408, 0.412084, 2.25751 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
-
-[node name="weathy6" type="MeshInstance" parent="table"]
-transform = Transform( -0.0984093, 0, -0.459633, 0, 0.25, 0, 0.229817, 0, -0.196819, 1.16912, 0.412084, 2.15833 )
-mesh = ExtResource( 13 )
-material/0 = SubResource( 9 )
+transform = Transform( 0.00666704, 0, -1.99999, 0, 2, 0, 1.99999, 0, 0.00666704, -92.007, -1.78809, 32.9483 )
+mesh = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]

@@ -14,5 +14,3 @@ func _on_Area_body_entered(body):
 	if quit == true:
 		get_tree().quit()
 
-
-
