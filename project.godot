@@ -14,6 +14,10 @@ config/name="Tao Te Ching 53"
 run/main_scene="res://Scenes/MainPath.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/fullscreen=true
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
