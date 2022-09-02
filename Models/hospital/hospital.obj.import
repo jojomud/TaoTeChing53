@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hospital.obj-2dbdb77539f27a9b2abdf45a9873fcbb.mesh"
+
+[deps]
+
+files=[ "res://.import/hospital.obj-2dbdb77539f27a9b2abdf45a9873fcbb.mesh" ]
+
+source_file="res://Models/hospital/hospital.obj"
+dest_files=[ "res://.import/hospital.obj-2dbdb77539f27a9b2abdf45a9873fcbb.mesh", "res://.import/hospital.obj-2dbdb77539f27a9b2abdf45a9873fcbb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
